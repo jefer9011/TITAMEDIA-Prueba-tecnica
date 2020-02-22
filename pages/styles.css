@@ -1,0 +1,328 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Noto Sans JP';
+    font-weight: 400;
+    background-color: #ffffff;
+    background-position: center;
+    background-size: cover;
+}
+
+nav {
+    padding: 8px;
+}
+
+.circulo {
+    border-radius: 50%;
+    background-color: #11977C;
+    width: 18px;
+    height: 18px;
+    border-color: #ffffff;
+}
+
+.logo {
+    float: left;
+    padding: 8px;
+    margin-left: 16px;
+    margin-top: 8px;
+}
+
+.logo a {
+    color: #777777;
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 25px;
+    letter-spacing: 0px;
+    text-decoration: none;
+}
+
+nav ul {
+    float: right;
+    /* //float: right; */
+}
+
+nav ul li {
+    display: inline-block;
+    float: left;
+}
+
+nav ul li:not(:first-child) {
+    margin-left: 48px;
+}
+
+nav ul li:last-child {
+    margin-right: 24px;
+}
+
+nav ul li a {
+    display: inline-block;
+    outline: none;
+    color: #000;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 1.2px;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 864px) {
+    .logo {
+        padding: 0;
+    }
+    .new-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background-color: #fff;
+        opacity: 0;
+        transition: all 0.2s ease;
+    }
+    .nav-wrapper ul {
+        position: absolute;
+        top: 50%;
+        transform: translateY( -50%);
+        width: 100%;
+    }
+    .nav-wrapper ul li {
+        display: block;
+        float: none;
+        width: 100%;
+        text-align: right;
+        margin-bottom: 10px;
+    }
+    .nav-wrapper ul li :nth-child(1) a {
+        transition-delay: 0.2s;
+    }
+    .nav-wrapper ul li :nth-child(2) a {
+        transition-delay: 0.3s;
+    }
+    .nav-wrapper ul li :nth-child(3) a {
+        transition-delay: 0.4s;
+    }
+    .nav-wrapper ul li :nth-child(4) a {
+        transition-delay: 0.5s;
+    }
+    .nav-wrapper ul li:not(:first-child) {
+        margin-left: 0;
+    }
+    .nav-wrapper ul li a {
+        padding: 10px 24px;
+        opacity: 0;
+        color: red;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 1.2px;
+        transform: translateX(-20px);
+        transition: all 0.2s ease;
+    }
+    .nav-btn {
+        align-items: center;
+        position: fixed;
+        right: 10px;
+        top: 10px;
+        display: block;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        z-index: 9999;
+        border-radius: 50%;
+    }
+    .nav-btn i {
+        display: block;
+        width: 20%;
+        height: 2px;
+        background: #000;
+        border-radius: 2px;
+        margin-left: 14px;
+    }
+    .nav-btn i:nth-child(1) {
+        margin-top: 16px;
+    }
+    .nav-btn i:nth-child(2) {
+        margin-top: 4px;
+        opacity: 1;
+    }
+    .nav-btn i:nth-child(3) {
+        margin-top: 4px;
+    }
+}
+
+#nav:checked+.nav-btn {
+    transform: rotate(45deg);
+}
+
+#nav:checked+.nav-btn i {
+    background: #000;
+    transition: transform 0.2s ease;
+}
+
+#nav:checked+.nav-btn i:nth-child(1) {
+    transform: translateY(6px) rotate(180deg);
+}
+
+#nav:checked+.nav-btn i:nth-child(2) {
+    opacity: 0;
+}
+
+#nav:checked+.nav-btn i:nth-child(3) {
+    transform: translateY(-6px) rotate(90deg);
+}
+
+#nav:checked ~ .nav-wrapper {
+    z-index: 9999;
+    opacity:1;
+}
+
+#nav:checked ~ .nav-wrapper ul li a {
+    z-index: 9999;
+    opacity:1;
+    trasnform: translateX(0);
+}
+.hidden {
+    display: none;
+}
+
+
+.columns {
+    column-count: 2;
+    column-gap: 2em;
+    column-rule: 1px solid #bbb;
+    column-width: 200px;
+}
+
+.column-1 {
+    column-count: 2;
+    column-fill: auto;
+}
+
+.menu {
+    column-span: all;
+}
+
+h1 {
+    column-span: all;
+}
+
+.titulo-col1 {
+    color: #363636;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: #11977E;
+}
+
+.menu-image {
+    column-span: all;
+    display: block;
+    margin-bottom: 5%;
+}
+
+
+/*
+#slider {
+overflow: hidden;
+}
+
+#slider figure {
+position: relative;
+width: 1000%;
+// 100% for each picture, 10 pictures = 1000% 
+margin: 0;
+left: 0;
+animation: 40s slider infinite;
+}
+
+#slider figure img {
+width: 10%;
+// 100 / 10 pictures = 10% 
+height: 700px;
+// to set a maximum height 
+float: left;
+//  next 2 to continue responsive with the maximum height  
+max-width: 100%;
+min-height: 100%;
+object-fit: cover;
+}
+
+@keyframes slider {
+0% {
+left: 0;
+}
+// you must divide 100% fot the amout of images you have 
+7% {
+left: 0%;
+}
+// these intermediate steps (7%, 17%, 27%, ... will make the transition speed faster 
+10% {
+left: -100%;
+}
+// because my total width: 1000% (10x 100% for 10 images), I will use 10% for each image 
+17% {
+left: -100%;
+}
+20% {
+left: -200%;
+}
+27% {
+left: -200%;
+}
+30% {
+left: -300%;
+}
+37% {
+left: -300%;
+}
+40% {
+left: -400%;
+}
+47% {
+left: -400%;
+}
+50% {
+left: -500%;
+}
+57% {
+left: -500%;
+}
+60% {
+left: -600%;
+}
+67% {
+left: -600%;
+}
+70% {
+left: -700%;
+}
+77% {
+left: -700%;
+}
+80% {
+left: -800%;
+}
+87% {
+left: -800%;
+}
+90% {
+left: -900%;
+}
+100% {
+left: -900%;
+}
+}
+
+*/

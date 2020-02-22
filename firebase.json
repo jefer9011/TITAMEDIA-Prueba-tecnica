@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "titamedia",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
