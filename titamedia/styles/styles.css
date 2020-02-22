@@ -129,18 +129,19 @@ nav ul li a {
 }
 
 .titulo-col1 {
-    color: #363636;
+    color: #777777;
     text-align: center;
     text-decoration-color: #11977E;
-    margin-bottom: 10px;
-    text-decoration-line: underline;
+    text-decoration-line: none;
+    border-bottom: 1px solid #11977E;
 }
 
 .subtitutlo-col1 {
-    color: #363636;
+    color: #777777;
     text-align: center;
     text-decoration-color: #11977E;
     margin-bottom: 10px;
+    border-top: 1px teal;
 }
 
 .p-col1 {
@@ -183,6 +184,11 @@ nav ul li a {
     left: 50%;
     z-index: 10000;
     transform: translate(-50%, -50%);
+}
+
+span {
+    color: white;
+    font-weight: bolder;
 }
 
 .phone_image {
