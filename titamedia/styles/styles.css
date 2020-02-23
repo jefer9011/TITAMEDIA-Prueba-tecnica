@@ -5,6 +5,7 @@ html {
 }
 
 header {
+    height: 10% !important;
     margin: 0;
     padding-right: 15%;
     padding-left: 15%;
@@ -13,7 +14,8 @@ header {
     background-color: #ffffff;
     background-position: center;
     background-size: cover;
-    z-index: 11000;
+    z-index: 1000000;
+    position: relative;
 }
 
 body {
@@ -26,6 +28,7 @@ body {
     background-color: #ffffff;
     background-position: center;
     background-size: cover;
+    z-index: -1000000;
 }
 
 footer {
@@ -44,10 +47,10 @@ nav {
 /* Screen > 864width settings */
 
 .image-section {
-    position: relative;
-    display: block;
-    -webkit-box-sizing: border-box;
     z-index: -1;
+    padding: 0;
+    border: 0;
+    margin: 0;
 }
 
 .circulo {
@@ -184,7 +187,7 @@ nav ul li a {
     text-align: center;
 }
 
-.container-image-main {
+#container-image-main {
     column-span: all;
     position: relative;
     display: inline-block;
@@ -193,10 +196,11 @@ nav ul li a {
 }
 
 .menu-image {
+    z-index: -100;
     column-span: all;
-    z-index: 100000;
     display: block;
-    margin-bottom: 2%;
+    margin-bottom: 1%;
+    width: 100% !important;
 }
 
 .text-above-image {
@@ -220,6 +224,11 @@ span {
     justify-content: right;
     width: 520px;
     height: 100%;
+}
+
+.cambiar:hover {
+    color: teal;
+    transform: scale(1.1);
 }
 
 
@@ -253,7 +262,7 @@ span {
         z-index: 100;
         color: white;
         position: absolute;
-        font-size: 15px;
+        font-size: 10px;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);

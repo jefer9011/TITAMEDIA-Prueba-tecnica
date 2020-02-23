@@ -184,20 +184,20 @@ nav ul li a {
     transform: translateY(-6px) rotate(90deg);
 }
 
-#nav:checked ~ .nav-wrapper {
+#nav:checked~.nav-wrapper {
     z-index: 9999;
-    opacity:1;
+    opacity: 1;
 }
 
-#nav:checked ~ .nav-wrapper ul li a {
+#nav:checked~.nav-wrapper ul li a {
     z-index: 9999;
-    opacity:1;
+    opacity: 1;
     trasnform: translateX(0);
 }
+
 .hidden {
     display: none;
 }
-
 
 .columns {
     column-count: 2;

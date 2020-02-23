@@ -5,9 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale-1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Pure CSS Slider</title>
+    <title>LogoHere</title>
     <link rel="stylesheet" href="./styles/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Mukta:700|Noto+Sans+JP:700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/tiny-slider.css">
+    <link rel="stylesheet" href="./styles/glide.core.min.css">
+    <link rel="stylesheet" href="./styles/glide.theme.min.css">
+    <link rel="shortcut icon" href="assets/icono.png" />
+
 
 </head>
 
@@ -29,10 +34,10 @@
                 <div class="nav-wrapper">
                     <ul>
 
-                        <li><a href="#">Home</a></li>
-                        <li><a href="./pages/about.html">About</a></li>
-                        <li><a href="./pages/products.html">Products</a></li>
-                        <li><a href="./pages/contact.html">Contact</a></li>
+                        <li><a class="cambiar" href="#">Home</a></li>
+                        <li><a class="cambiar" href="./pages/products.html">Products</a></li>
+                        <li><a class="cambiar" href="./pages/about.html">About</a></li>
+                        <li><a class="cambiar" href="./pages/contact.html">Contact</a></li>
                     </ul>
                 </div>
             </nav>
@@ -40,8 +45,23 @@
     </header>
     <!-- Image Slider Section -->
     <section class="image-section">
-        <div class="container-image-main">
-            <img class="menu-image" src="assets/image-big.png" alt="Imagen main" width="100%">
+
+        <div id="container-image-main">
+            <div class="glide">
+                <div class="glide__track" data-glide-el="track">
+
+                    <ul class="glide__slides">
+                        <li class="glide__slide"> <img class="menu-image" src="https://firebasestorage.googleapis.com/v0/b/titamedia.appspot.com/o/images-tita%2Fimage-big.png?alt=media&token=a32e8109-56b5-47aa-99dd-1a374b94705a" alt=""> </li>
+                        <li class="glide__slide"> <img class="menu-image" src="assets/image-big2.png" alt=""></li>
+                        <li class="glide__slide"> <img class="menu-image" src="assets/image-big3.jpg" alt=""></li>
+                    </ul>
+                </div>
+                <div class="glide__arrows" data-glide-el="controls">
+                    <button class="glide__arrow glide__arrow--left" data-glide-dir="<"> < </button>
+                    <button class="glide__arrow glide__arrow--right" data-glide-dir=">"> > </button>
+                </div>
+            </div>
+            <!-- <img class="menu-image" src="assets/image-big.png" alt="Imagen main" width="100%"> -->
             <div>
                 <h1 class="text-above-image">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor <span class="type"></span> </h1>
                 <label for="underline" class="uderline">
@@ -61,7 +81,10 @@
                 <h4 class="enlaceTitamedia"> <a href="#">You can learn more about the sample here</a> </h4>
             </div>
             <div class="column-2">
-                <img class="phone_image" src="assets/phone.png" alt="Imagen main" width="100%">
+                <!-- <img class="phone_image" src="assets/phone.png" alt="Imagen main" width="100%"> -->
+                <img class="phone_image" src="https://firebasestorage.googleapis.com/v0/b/titamedia.appspot.com/o/images-tita%2Fphone.png?alt=media&token=c04cfe0a-0e3e-4961-a351-fe8f74689014
+                " alt="Imagen main" width="100%">
+
             </div>
         </div>
     </section>
@@ -70,7 +93,17 @@
         <h5>Hecho por: Jeferson Grueso</h5>
     </footer>
     <!-- Scripts -->
-    <script src="typed.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <script>
+        const config = {
+            autoplay: 3000,
+            gap: 0,
+            hoverpause: false,
+            rewind: true,
+        }
+        new Glide('.glide', config).mount()
+    </script>
+    <script src="scripts/typed.js"></script>
     <script>
         var typed3 = new Typed('.type', {
             strings: ['incididunt', 'consectetur', 'adipisicing'],
