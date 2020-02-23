@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/tiny-slider.css">
     <link rel="stylesheet" href="./styles/glide.core.min.css">
     <link rel="stylesheet" href="./styles/glide.theme.min.css">
-    <link rel="shortcut icon" href="assets/icono.png" />
+    <link rel="shortcut icon" href="https://firebasestorage.googleapis.com/v0/b/titamedia.appspot.com/o/images-tita%2Ficono.png?alt=media&token=1f41cb98-41db-40d6-9ef7-ee7cf325c7c3" />
+    <!-- <link rel="shortcut icon" href="assets/icono.png" /> -->
 
 
 </head>
@@ -51,9 +52,16 @@
                 <div class="glide__track" data-glide-el="track">
 
                     <ul class="glide__slides">
-                        <li class="glide__slide"> <img class="menu-image" src="https://firebasestorage.googleapis.com/v0/b/titamedia.appspot.com/o/images-tita%2Fimage-big.png?alt=media&token=a32e8109-56b5-47aa-99dd-1a374b94705a" alt=""> </li>
-                        <li class="glide__slide"> <img class="menu-image" src="assets/image-big2.png" alt=""></li>
-                        <li class="glide__slide"> <img class="menu-image" src="assets/image-big3.jpg" alt=""></li>
+                        <!-- Images from firebase storage -->
+                        <!-- <li class="glide__slide"> <img class="menu-image" src="https://firebasestorage.googleapis.com/v0/b/titamedia.appspot.com/o/images-tita%2Fimage-big.png?alt=media&token=a32e8109-56b5-47aa-99dd-1a374b94705a" alt=""> </li>
+                        <li class="glide__slide"> <img class="menu-image" src="https://firebasestorage.googleapis.com/v0/b/titamedia.appspot.com/o/images-tita%2Fimage-big2.png?alt=media&token=ad4beb25-7e89-40e1-a5c4-fc82416676e2" alt=""></li>
+                        <li class="glide__slide"> <img class="menu-image" src="https://firebasestorage.googleapis.com/v0/b/titamedia.appspot.com/o/images-tita%2Fimage-big3.jpg?alt=media&token=981f0d81-701c-4eb5-936b-078e73e28c2c" alt=""></li> -->
+                        <li id="ima1" class="glide__slide"></li>
+                        <li id="ima2" class="glide__slide"></li>
+                        <li id="ima3" class="glide__slide"></li>
+
+                        <!-- <li class="glide__slide"> <img class="menu-image" src="assets/image-big.png" alt=""> </li> -->
+
                     </ul>
                 </div>
                 <div class="glide__arrows" data-glide-el="controls">
@@ -74,11 +82,11 @@
     <section class="columns-section">
         <div class="columns">
             <div class="column-1">
-                <h2 class="titulo-col1">Lorem ipsum dolor sit amet.</h2>
+                <h2 id="titulo2" class="titulo-col1"></h2>
                 <h5 class="subtitutlo-col1">Lorem ipsum dolor sit amet.</h5>
                 <p class="p-col1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore dolores incidunt pariatur distinctio mollitia laboriosam ducimus, earum, quis vero eligendi animi assumenda ad tenetur ex totam error facere quasi voluptatibus corrupti
                     dolorum similique. Voluptatibus ratione atque aliquam nihil, laborum, tempore architecto accusamus cumque dolor neque non vero, fuga voluptatum accusantium.</p>
-                <h4 class="enlaceTitamedia"> <a href="#">You can learn more about the sample here</a> </h4>
+                <h4 class="enlaceTitamedia"> <a href="https://www.titamedia.com/" target="_blank">You can learn more about the sample here</a> </h4>
             </div>
             <div class="column-2">
                 <!-- <img class="phone_image" src="assets/phone.png" alt="Imagen main" width="100%"> -->
@@ -103,6 +111,7 @@
         }
         new Glide('.glide', config).mount()
     </script>
+    <script src="./scripts/imagesjson.js"></script>
     <script src="scripts/typed.js"></script>
     <script>
         var typed3 = new Typed('.type', {
